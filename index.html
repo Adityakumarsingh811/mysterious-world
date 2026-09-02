@@ -1,0 +1,542 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mysterious World - Unsolved Mysteries  & Ghost Stories</title>
+<meta name="google-site-verification" 
+content="w5ZAAS3o2_yD0oo3jHxmWseILIZXA47Uo8SW9TjkTg8" />
+<script defer src="/_vercel/insights/script.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0e;
+            color: #ffffff;
+            padding: 30px 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            padding: 35px 20px;
+            background: #14141e;
+            border: 2px solid #ff2a4b;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(255, 42, 75, 0.2);
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            color: #ff2a4b;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        /* Banner Container Fix */
+        .banner-card {
+            width: 100%;
+            background: #14141e;
+            border: 1px solid #2a2a3a;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .banner-card img {
+            max-width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #ffb400;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #ff2a4b;
+            font-weight: bold;
+        }
+
+        /* Scripts Section */
+        .script-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .script-card {
+            background: #14141e;
+            border: 1px solid #2a2a3a;
+            border-left: 5px solid #ff2a4b;
+            border-radius: 12px;
+            padding: 22px;
+        }
+
+        .script-card h3 {
+            color: #ff2a4b;
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .script-content {
+            color: #e0e0e0;
+            font-size: 1rem;
+            line-height: 1.8;
+            background: #0f0f17;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #222233;
+        }
+
+        /* Notes Breakdown Grid */
+        .notes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 18px;
+            margin-bottom: 40px;
+        }
+
+        .note-card {
+            background: #14141e;
+            border: 1px solid #2a2a3a;
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .note-card .tag {
+            color: #ffb400;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .note-card h4 {
+            color: #ffffff;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        .note-card p {
+            color: #a0a0b0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .story-text {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #2a2a3a;
+            color: #dcdcdc;
+        }
+
+        /* Gallery Grid Fix for Full Aspect Ratio */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .gallery-item {
+            background: #14141e;
+            border: 1px solid #2a2a3a;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .img-wrapper {
+            width: 100%;
+            min-height: 350px;
+            background: #050508;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            max-height: 450px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            border-radius: 6px;
+        }
+
+        .gallery-info {
+            padding: 14px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #ffffff;
+            background: #1c1c28;
+            border-top: 1px solid #2a2a3a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #666677;
+            font-size: 0.9rem;
+            border-top: 1px solid #222233;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Delhi Cantonment Road</h1>
+            <p class="subtitle">Mysterious World — Urban Legend Archives</p>
+        </header>
+
+        <!-- Main Banner -->
+        <div class="banner-card">
+            <img src="thumbnail/thumbnail.png" alt="Delhi Cantonment Cover">
+        </div>
+
+        <!-- Voiceover Scripts (Main Story) -->
+        <div class="section-title">📜 Voiceover Scripts (3 Parts)</div>
+        <div class="script-container">
+            <div class="script-card">
+                <h3>Part 1: The Dark Highway</h3>
+                <div class="script-content"><h1>दिल्ली कैंटोनमेंट रोड: रात के अँधेरे में छिपा एक अनसुलझा रहस्य 
+
+(Part 1)</h1><br><br>
+<h3>क्या आप आधी रात के बाद इस सड़क से अकेले गुजरने की हिम्मत करेंगे? </h3>
+रात के 2 बजकर 15 मिनट हो चुके हैं। <br><br>
+दिल्ली की भाग-दौड़ भरी ज़िंदगी अब धीरे-धीरे शांत हो चुकी है। दूर कहीं किसी कुत्ते के भौंकने की आवाज़ सुनाई देती है। ठंडी हवा पेड़ों की 
+
+शाखाओं को हिलाती हुई सड़क पर एक अजीब-सी खामोशी बिखेर रही है। <br><br>
+आप अपनी कार में अकेले बैठे हैं। <br><br>
+कार की हेडलाइट सामने फैली सुनसान सड़क को रोशन कर रही है। सड़क के दोनों ओर घने पेड़ खड़े हैं, मानो वर्षों से किसी रहस्य की 
+
+रखवाली कर रहे हों। <br><br>
+अचानक आपकी नज़र सड़क के किनारे पड़ती है...
+कुछ पल के लिए ऐसा लगता है जैसे कोई सफेद कपड़ों में खड़ा है।
+आप दोबारा ध्यान से देखते हैं...
+लेकिन वहाँ कुछ भी नहीं होता।
+क्या यह सिर्फ़ आपकी आँखों का भ्रम था?
+या फिर अँधेरे ने आपके मन के साथ कोई खेल खेला?
+ऐसे ही सवालों ने वर्षों से दिल्ली कैंटोनमेंट रोड को रहस्य और रोमांच का विषय बनाए रखा है। <br><br>
+यह सड़क दिन के समय बिल्कुल सामान्य दिखाई देती है। रोज़ की तरह लोग यहाँ से गुजरते हैं, गाड़ियाँ दौड़ती हैं और सब कुछ सामान्य 
+
+लगता है। लेकिन रात होते ही इस सड़क के बारे में कई तरह की कहानियाँ सुनने को मिलती हैं। <br><br>
+स्थानीय लोगों के बीच लंबे समय से यह चर्चा रही है कि देर रात इस रास्ते पर कुछ लोगों ने ऐसे अनुभव होने का दावा किया जिन्हें वे 
+
+आज तक समझ नहीं पाए। किसी ने अजीब आवाज़ें सुनने की बात कही, किसी ने ऐसा महसूस किया जैसे कोई उनका पीछा कर रहा हो, तो 
+
+किसी ने सड़क के किनारे किसी अनजान आकृति को देखने का दावा किया। <br><br>
+इन दावों की स्वतंत्र रूप से पुष्टि नहीं हुई है, लेकिन इन्हीं कहानियों ने इस सड़क को भारत की सबसे चर्चित रहस्यमयी जगहों में शामिल कर 
+
+दिया है।<br><br>
+<h3>आखिर यह सड़क है कहाँ? </h3><br><br>
+दिल्ली कैंटोनमेंट, जिसे आमतौर पर Delhi Cantt कहा जाता है, राजधानी दिल्ली का एक प्रमुख सैन्य क्षेत्र है। यहाँ भारतीय सेना के कई 
+
+प्रतिष्ठान, आवासीय परिसर और हरियाली से घिरे लंबे सड़क मार्ग मौजूद हैं। <br><br>
+दिन में यह इलाका शांत, व्यवस्थित और सामान्य दिखाई देता है। लेकिन रात के समय यहाँ का वातावरण बिल्कुल अलग महसूस हो सकता 
+
+है। कम ट्रैफिक, घने पेड़, लंबी सुनसान सड़कें और हल्की रोशनी मिलकर ऐसा माहौल बना देते हैं, जिससे किसी भी व्यक्ति को असहज महसूस 
+
+हो सकता है। <br><br>
+यही कारण है कि समय के साथ इस सड़क से जुड़ी कई रहस्यमयी कहानियाँ लोगों के बीच फैलती चली गईं। <br><br>
+<h3>आखिर ये कहानियाँ शुरू कैसे हुईं? </h3><br><br>
+इस सवाल का कोई एक निश्चित जवाब नहीं है।
+कुछ लोगों का मानना है कि वर्षों पहले यहाँ किसी महिला की सड़क दुर्घटना में मृत्यु हुई थी। इसके बाद लोगों ने दावा करना शुरू किया कि 
+
+देर रात उन्हें सफेद कपड़ों में एक महिला दिखाई देती है। <br><br>
+हालाँकि, इस कहानी की पुष्टि करने वाले विश्वसनीय ऐतिहासिक प्रमाण उपलब्ध नहीं हैं। इसलिए इसे एक लोकप्रिय शहरी किंवदंती (Urban 
+
+Legend) माना जाता है, न कि स्थापित ऐतिहासिक तथ्य। <br><br>
+लेकिन रहस्य यहीं खत्म नहीं होता... <br><br>
+समय के साथ इन कहानियों में नए-नए दावे जुड़ते गए। कुछ लोगों ने कहा कि उन्होंने सड़क पर किसी को लिफ्ट माँगते देखा। कुछ ने बताया 
+
+कि उनके वाहन के पीछे कोई दौड़ रहा था। वहीं कुछ लोगों का कहना था कि उन्होंने वहाँ ऐसा अनुभव किया जिसे वे आज तक शब्दों में 
+
+बयान नहीं कर पाए। <br><br>
+क्या ये केवल डर और कल्पना का असर था? <br><br>
+या फिर इन कहानियों के पीछे कोई ऐसा सच छिपा है, जो आज भी लोगों की नज़रों से ओझल है? <br><br>
+इसी सवाल का जवाब खोजने के लिए हमें उन लोगों के कथित अनुभवों को समझना होगा, जिन्होंने दावा किया कि उन्होंने इस सड़क पर कुछ 
+
+असामान्य महसूस किया।
+जारी रहेगा... <br><br>
+</div>
+            </div>
+            <div class="script-card">
+                <h3>Part 2: Unseen Presence</h3>
+                <div class="script-content"><h1> दिल्ली कैंटोनमेंट रोड: रात के अँधेरे में छिपा एक अनसुलझा रहस्य 
+
+(Part 2) </h1><br><br>
+<h3>जिन लोगों ने इस सड़क से रात में सफर किया... उन्होंने क्या देखा? </h3><br><br>
+समय के साथ दिल्ली कैंटोनमेंट रोड से जुड़ी कई कहानियाँ लोगों के बीच फैलने लगीं। इनमें से कुछ केवल अफवाहें मानी गईं, जबकि कुछ 
+
+लोगों ने दावा किया कि उन्होंने स्वयं ऐसी घटनाओं का अनुभव किया जिन्हें वे आज तक नहीं भूल पाए। <br><br>
+इन्हीं कथित अनुभवों ने इस सड़क को रहस्य और रोमांच का केंद्र बना दिया। <br><br>
+<h3>पहली कहानी – सफेद कपड़ों में दिखाई देने वाली महिला </h3><br><br>
+सबसे चर्चित कहानी एक रहस्यमयी महिला की है। <br><br>
+स्थानीय लोगों के बीच यह कहानी वर्षों से सुनाई जाती रही है कि देर रात इस सड़क से गुजरते समय कुछ लोगों ने सफेद कपड़ों में एक 
+
+महिला को सड़क किनारे खड़े देखा। कुछ ने कहा कि वह हाथ देकर गाड़ी रोकने का इशारा करती थी। <br><br>
+कई कथाओं के अनुसार, यदि कोई वाहन नहीं रोकता, तो कुछ दूरी बाद वही महिला फिर से आगे दिखाई देने की बात कही जाती है। 
+
+<br><br>
+इन दावों की पुष्टि किसी आधिकारिक जाँच या विश्वसनीय प्रमाण से नहीं हुई है, लेकिन यही कहानी इस सड़क की सबसे प्रसिद्ध लोककथाओं में 
+
+गिनी जाती है। <br><br>
+<h3>दूसरी कहानी – पीछे कोई है... </h3><br><br>
+कुछ लोगों ने बताया कि देर रात गाड़ी चलाते समय उन्हें बार-बार ऐसा महसूस हुआ जैसे कोई उनके वाहन के पीछे दौड़ रहा हो। 
+
+<br><br>
+उन्होंने रियर-व्यू मिरर में कई बार देखने की बात कही, लेकिन स्पष्ट रूप से कुछ दिखाई नहीं दिया। <br><br>
+कुछ ने इसे डर के कारण पैदा हुआ भ्रम माना, जबकि कुछ लोगों का कहना था कि उन्हें उस समय ऐसा लगा जैसे सड़क पर वे बिल्कुल अकेले 
+
+नहीं थे। <br><br>
+<h3>तीसरी कहानी – अचानक बढ़ गई धड़कन </h3><br><br>
+कुछ यात्रियों ने दावा किया कि इस सड़क से गुजरते समय बिना किसी स्पष्ट कारण के उन्हें बेचैनी महसूस होने लगी। <br><br>
+दिल की धड़कन तेज़ हो गई, हाथ-पैर ठंडे पड़ गए और ऐसा लगा जैसे कोई अनदेखी निगाह लगातार उन्हें देख रही हो। <br><br>
+मनोवैज्ञानिक मानते हैं कि अँधेरा, सुनसान वातावरण और पहले से सुनी हुई डरावनी कहानियाँ हमारे दिमाग को अधिक सतर्क बना देती हैं। 
+
+ऐसी स्थिति में सामान्य आवाज़ें भी असामान्य लग सकती हैं। <br><br>
+लेकिन जो लोग यह अनुभव कर चुके होने का दावा करते हैं, उनके लिए यह केवल मन का भ्रम नहीं था। <br><br>
+<h3>इंटरनेट पर फैली कहानियाँ </h3><br><br>
+सोशल मीडिया, ब्लॉग और वीडियो प्लेटफ़ॉर्म पर इस सड़क के बारे में अनगिनत कहानियाँ मिल जाती हैं। <br><br>
+किसी ने कहा कि उनकी कार अचानक बंद हो गई। <br><br>
+किसी ने दावा किया कि मोबाइल नेटवर्क गायब हो गया। <br><br>
+किसी ने लिखा कि उन्हें सड़क पर कोई दिखाई दिया, लेकिन अगले ही पल वह गायब हो गया। <br><br>
+इनमें से अधिकांश दावों का कोई स्वतंत्र प्रमाण उपलब्ध नहीं है। फिर भी, ऐसी कहानियाँ लोगों की जिज्ञासा लगातार बढ़ाती रहती हैं। 
+
+<br><br>
+<h3> क्या डर ही सबसे बड़ा रहस्य है? </h3><br><br>
+कल्पना कीजिए... <br><br>
+रात के लगभग तीन बजे हैं। <br><br>
+आप अकेले गाड़ी चला रहे हैं। <br><br>
+सड़क पर दूर-दूर तक कोई नहीं। <br><br>
+चारों ओर पेड़ों की परछाइयाँ। <br><br>
+हल्की हवा। <br><br>
+और अचानक... <br><br>
+आपको ऐसा महसूस होता है जैसे किसी ने आपके कंधे के पीछे से आपका नाम पुकारा हो। <br><br>
+आप तुरंत पीछे मुड़ते हैं... <br><br>
+लेकिन वहाँ कोई नहीं होता। <br><br>
+शायद यह सिर्फ़ आपका भ्रम हो। <br><br>
+या शायद केवल हवा की आवाज़। <br><br>
+लेकिन उस एक पल में जो डर महसूस होता है, वही इन कहानियों को ज़िंदा रखता है। <br><br>
+यही वजह है कि दिल्ली कैंटोनमेंट रोड आज भी रहस्य प्रेमियों, यूट्यूब डॉक्यूमेंट्री बनाने वालों और रोमांच पसंद लोगों के बीच चर्चा का विषय 
+
+बनी हुई है। <br><br>
+<h3>लेकिन क्या इन घटनाओं के पीछे वास्तव में कोई अलौकिक शक्ति है? <br><br>
+या फिर इसके पीछे छिपा है विज्ञान, मनोविज्ञान और इंसानी दिमाग का खेल? </h3>
+इसी सवाल का जवाब हम Part 3 में जानेंगे, जहाँ हम इन कहानियों के पीछे के तथ्यों, वैज्ञानिक दृष्टिकोण और उपलब्ध जानकारी का 
+
+विश्लेषण करेंगे।
+</div>
+            </div>
+            <div class="script-card">
+                <h3>Part 3: The Vanishing Phantom</h3>
+                <div class="script-content"><h1>दिल्ली कैंटोनमेंट रोड: रात के अँधेरे में छिपा एक अनसुलझा रहस्य 
+
+(Part 3). </h1><br><br>
+<h3>क्या सचमुच यह सड़क भूतिया है? </h3><br><br>
+अब सबसे बड़ा सवाल यही है... <br><br>
+क्या दिल्ली कैंटोनमेंट रोड वास्तव में भूतिया है? <br><br>
+या फिर यह केवल वर्षों से चली आ रही कहानियों का परिणाम है? <br><br>
+आज तक ऐसा कोई आधिकारिक वैज्ञानिक प्रमाण या सरकारी रिपोर्ट सामने नहीं आई है जो यह साबित करती हो कि इस सड़क पर वास्तव में 
+
+अलौकिक घटनाएँ होती हैं। <br><br>
+फिर भी, एक सवाल आज भी लोगों के मन में बना हुआ है— <br><br>
+अगर यह सब सिर्फ़ अफवाह है, तो इतने वर्षों से एक जैसी कहानियाँ बार-बार क्यों सुनाई देती हैं? <br><br>
+कुछ विशेषज्ञों का मानना है कि इसका कारण इंसानी दिमाग और वातावरण का मेल हो सकता है। <br><br>
+रात का अँधेरा... <br><br>
+लंबी और सुनसान सड़क... <br><br>
+दोनों ओर घने पेड़... <br><br>
+हल्की रोशनी... <br><br>
+और पहले से सुनी हुई डरावनी कहानियाँ... <br><br>
+ये सभी बातें मिलकर इंसान के दिमाग को अत्यधिक सतर्क बना देती हैं। ऐसे माहौल में कई बार साधारण परछाइयाँ भी किसी आकृति जैसी 
+
+लग सकती हैं, हवा की आवाज़ किसी फुसफुसाहट जैसी महसूस हो सकती है और सामान्य घटनाएँ भी असाधारण प्रतीत हो सकती हैं। 
+
+<br><br>
+लेकिन दूसरी ओर, कुछ लोग आज भी पूरे विश्वास के साथ कहते हैं कि उन्होंने वहाँ कुछ ऐसा महसूस किया जिसे वे केवल भ्रम नहीं मानते। 
+
+<br><br>
+<h3>यही बात इस सड़क को रहस्य से भर देती है।
+सच और कहानी के बीच की पतली रेखा </h3><br><br>
+दुनिया में कई ऐसी जगहें हैं जहाँ लोककथाएँ पीढ़ी-दर-पीढ़ी सुनाई जाती रही हैं। समय के साथ हर व्यक्ति अपने अनुभव, अपनी कल्पना और 
+
+अपनी व्याख्या भी उन कहानियों में जोड़ देता है। <br><br>
+धीरे-धीरे एक कहानी... एक किंवदंती बन जाती है। <br><br>
+और फिर वही किंवदंती उस जगह की पहचान बन जाती है। <br><br>
+दिल्ली कैंटोनमेंट रोड के साथ भी कुछ ऐसा ही हुआ है। <br><br>
+यह सड़क आज केवल एक सड़क नहीं रही, बल्कि रहस्य, रोमांच और अनगिनत सवालों का प्रतीक बन चुकी है। <br><br>
+<h3>अगर आपको कभी वहाँ जाना पड़े... </h3><br><br>
+अगर किसी कारण से आपको कभी देर रात इस सड़क से गुजरना पड़े, तो सबसे ज़रूरी बात है कि शांत रहें, सुरक्षित तरीके से वाहन चलाएँ 
+
+और अफवाहों के कारण घबराकर कोई जोखिम भरा कदम न उठाएँ। <br><br>
+डर कई बार हमारी कल्पना को वास्तविकता से कहीं आगे ले जाता है। <br><br>
+<h3>अंतिम सवाल... </h3><br><br>
+तो अब फैसला आपके हाथ में है। <br><br>
+क्या दिल्ली कैंटोनमेंट रोड की कहानियाँ केवल कल्पना हैं? <br><br>
+क्या यह सिर्फ़ अँधेरे और मनोविज्ञान का असर है? <br><br>
+या फिर इन कहानियों के पीछे ऐसा कोई सच छिपा है, <br><br>जिसे आज तक कोई पूरी तरह समझ नहीं पाया? <br><br>
+इस सवाल का जवाब शायद आज भी उसी सड़क की खामोशी में कहीं छिपा हुआ है... <br><br>
+और शायद... <br><br>
+वह खामोशी कभी अपना राज़ पूरी तरह न बताए।<br><br>
+________________________________________
+<h3>आपकी क्या राय है? </h3><br><br>
+क्या आप मानते हैं कि दिल्ली कैंटोनमेंट रोड से जुड़ी ये कहानियाँ केवल अफवाह हैं, या आपको लगता है कि हर लोककथा के पीछे कहीं न 
+
+कहीं कोई अनजाना सच छिपा होता है? <br><br>
+अपनी राय नीचे कमेंट में ज़रूर लिखें। अगर आपको यह लेख पसंद आया हो, तो इसे अपने दोस्तों के साथ साझा करें और ऐसी ही रहस्यमयी, 
+
+ऐतिहासिक और रोमांचक कहानियों के लिए हमारी वेबसाइट से जुड़े रहें।
+</div>
+            </div>
+        </div>
+
+        <!-- Notes Breakdown Structure with Story Text (9 Subparts) -->
+        <div class="section-title">📝 Scene-by-Scene Breakdown</div>
+        <div class="notes-grid">
+            <div class="note-card">
+                <div class="tag">Part 1 — Scene 01</div>
+                <h4>Introduction Path</h4>
+                <p>Image: <code>images/1.png</code></p>
+                <p class="story-text">दिल्ली छावनी का यह वह सुनसान रास्ता है, जहाँ दिन में भी एक अजीब सी खामोशी 
+
+छाई रहती है और हवाओं में एक डर महसूस होता है।</p>
+            </div>
+            <div class="note-card">
+                <div class="tag">Part 1 — Scene 02</div>
+                <h4>Daylight View</h4>
+                <p>Image: <code>images/2.png</code></p>
+                <p class="story-text">दिन के उजाले में यह सड़क किसी भी आम सड़क जैसी ही दिखती है, लेकिन इसके 
+
+पुराने पेड़ों के पीछे कई अनकहे राज छिपे हैं।</p>
+            </div>
+            <div class="note-card">
+                <div class="tag">Part 1 — Scene 03</div>
+                <h4>Sunset Transition</h4>
+                <p>Image: <code>images/3.png</code></p>
+                <p class="story-text">जैसे-जैसे सूरज ढलता है, इस रास्ते का माहौल भयानक होने लगता है। रोशनी कम होते 
+
+ही मुसाफिरों का डर बढ़ने लगता है।</p>
+            </div>
+            <div class="note-card">
+                <div class="tag">Part 2 — Scene 04</div>
+                <h4>Thick Fog Enveloping</h4>
+                <p>Image: <code>images/4.png</code></p>
+                <p class="story-text">रात होते ही पूरी सड़क पर घनी धुंध छा जाती है, जिसमें कुछ मीटर आगे का रास्ता 
+
+देखना भी लगभग नामुमकिन हो जाता है।</p>
+            </div>
+            <div class="note-card">
+                <div class="tag">Part 2 — Scene 05</div>
+                <h4>The White Figure</h4>
+                <p>Image: <code>images/5.png</code></p>
+                <p class="story-text">कहा जाता है कि इसी धुंध के बीच, अचानक एक सफेद साड़ी पहने महिला गाड़ी वालों 
+
+से लिफ्ट मांगते हुए दिखाई देती है।</p>
+            </div>
+            <div class="note-card">
+                <div class="tag">Part 2 — Scene 06</div>
+                <h4>The Pursuit Curve</h4>
+                <p>Image: <code>images/6.png</code></p>
+                <p class="story-text">अगर आप डर कर गाड़ी नहीं रोकते, तो वह रहस्यमयी साया आपकी कार की तेज़ 
+
+रफ्तार के साथ-साथ दौड़ने लगता है।</p>
+            </div>
+            <div class="note-card">
+                <div class="tag">Part 3 — Scene 07</div>
+                <h4>Silent Forest Stretch</h4>
+                <p>Image: <code>images/7.png</code></p>
+                <p class="story-text">सड़क के दोनों ओर फैले इन घने पेड़ों के बीच से गुजरते हुए, लोगों ने कई बार अजीब 
+
+और डरावनी आवाजें सुनी हैं.</p>
+            </div>
+            <div class="note-card">
+                <div class="tag">Part 3 — Scene 08</div>
+                <h4>Eyewitness Spot</h4>
+                <p>Image: <code>images/8.png</code></p>
+                <p class="story-text">यह वही खौफनाक जगह है जहाँ कई चश्मदीदों ने उस डरावनी आकृति को अपनी गाड़ी 
+
+का पीछा करते हुए साफ-साफ देखा था।</p>
+            </div>
+            <div class="note-card">
+                <div class="tag">Part 3 — Scene 09</div>
+                <h4>Unsolved Legend</h4>
+                <p>Image: <code>images/9.png</code></p>
+                <p class="story-text">आज भी यह एक अनसुलझा रहस्य बना हुआ है कि वह कोई भटकती हुई आत्मा है या 
+
+सिर्फ लोगों के दिमाग का एक वहम।</p>
+            </div>
+        </div>
+
+        <!-- Full Aspect Ratio Gallery Grid -->
+        <div class="section-title">📸 Story Scene Gallery</div>
+        <div class="gallery-grid">
+            <div class="gallery-item"><div class="img-wrapper"><img src="images/1.png" 
+
+alt="Scene 1"></div><div class="gallery-info">Scene 01: Introduction Path</div></div>
+            <div class="gallery-item"><div class="img-wrapper"><img src="images/2.png" 
+
+alt="Scene 2"></div><div class="gallery-info">Scene 02: Daylight View</div></div>
+            <div class="gallery-item"><div class="img-wrapper"><img src="images/3.png" 
+
+alt="Scene 3"></div><div class="gallery-info">Scene 03: Sunset Transition</div></div>
+            <div class="gallery-item"><div class="img-wrapper"><img src="images/4.png" 
+
+alt="Scene 4"></div><div class="gallery-info">Scene 04: Thick Fog</div></div>
+            <div class="gallery-item"><div class="img-wrapper"><img src="images/5.png" 
+
+alt="Scene 5"></div><div class="gallery-info">Scene 05: The White Figure</div></div>
+            <div class="gallery-item"><div class="img-wrapper"><img src="images/6.png" 
+
+alt="Scene 6"></div><div class="gallery-info">Scene 06: Pursuit Curve</div></div>
+            <div class="gallery-item"><div class="img-wrapper"><img src="images/7.png" 
+
+alt="Scene 7"></div><div class="gallery-info">Scene 07: Silent Trees</div></div>
+            <div class="gallery-item"><div class="img-wrapper"><img src="images/8.png" 
+
+alt="Scene 8"></div><div class="gallery-info">Scene 08: Eyewitness Spot</div></div>
+            <div class="gallery-item"><div class="img-wrapper"><img src="images/9.png" 
+
+alt="Scene 9"></div><div class="gallery-info">Scene 09: Unsolved Legend</div></div>
+        </div>
+
+        <footer>
+            &copy; Mysterious World Project | Netlify Ready Deployment
+        </footer>
+    </div>
+
+</body>
+</html>

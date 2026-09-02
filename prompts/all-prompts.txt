@@ -1,0 +1,118 @@
+DELHI CANTONMENT ROAD 
+ALL IMAGE PROMPTS
+==============================================
+PART 1 – COVER IMAGE
+File Name: 01-cover.txt
+
+Final Prompt:
+
+Ultra-realistic cinematic night view of Delhi Cantonment Road, India. A deserted tree-lined road under a full moon with dense fog, warm yellow streetlights glowing through the mist, mysterious atmosphere, dramatic clouds, Netflix documentary style, DSLR photography, photorealistic, ultra-detailed, 8K, no people, no vehicles, no text, no watermark.
+
+Negative Prompt:
+
+cartoon, anime, illustration, painting, CGI, low quality, blurry, watermark, logo, text, ghost, white lady, zombie, demon, monster, blood, gore, horror face, red glowing eyes
+
+==============================================
+PART 2 – DAY ROAD
+File Name: 02-day-road.txt
+
+Final Prompt:
+
+Ultra-realistic daytime view of Delhi Cantonment Road, India. A wide clean asphalt road lined with tall green trees on both sides, bright natural sunlight filtering through the trees, a few cars passing normally, peaceful environment, realistic documentary photography, DSLR quality, ultra-detailed, photorealistic, 8K, natural colors, no fog, no mystery, no ghosts, no monsters, no text, no watermark.
+
+Negative Prompt:
+
+night, fog, ghost, horror, monster, demon, zombie, blood, gore, cartoon, anime, blurry, watermark, logo, text
+
+==============================================
+PART 3 – NIGHT ROAD
+File Name: 03-night-road.txt
+
+Final Prompt:
+
+Ultra-realistic cinematic night view of Delhi Cantonment Road, India. The same road seen after sunset with dense fog slowly covering the asphalt, warm yellow streetlights glowing through the mist, tall dark trees arching over the road, empty road with no vehicles or people, dramatic cloudy sky with a partially hidden moon, volumetric lighting, Netflix documentary style, DSLR photography, photorealistic, ultra-detailed, 8K, no text, no watermark.
+
+Negative Prompt:
+
+daylight, sun, cartoon, anime, blurry, watermark, logo, people, ghost, zombie, demon, blood, gore
+
+==============================================
+PART 4 – CAR ON ROAD
+File Name: 04-car-on-road.txt
+
+Final Prompt:
+
+Ultra-realistic cinematic night view of Delhi Cantonment Road, India. A lonely black SUV driving slowly through dense fog on an empty tree-lined road, headlights illuminating the mist, warm yellow streetlights, dramatic cloudy sky, documentary photography, Netflix cinematic style, DSLR quality, photorealistic, ultra-detailed, 8K, no people, no ghosts, no monsters, no text, no watermark.
+
+Negative Prompt:
+
+ghost, white lady, zombie, demon, monster, blood, gore, cartoon, anime, watermark, logo, text, blurry
+
+==============================================
+PART 5 – CAR ON ROAD
+File Name: 05-mystery-tree.txt
+
+Final Prompt:
+
+Ultra-realistic cinematic night view of Delhi Cantonment Road, India. Massive ancient trees with twisted branches forming a dark natural tunnel over the empty road, thick fog drifting between the tree trunks, warm yellow streetlights casting long eerie shadows, moonlight filtering through the leaves, documentary photography, Netflix cinematic style, DSLR quality, photorealistic, ultra-detailed, 8K, no people, no vehicles, no ghosts, no monsters, no text, no watermark.
+
+Negative Prompt:
+
+ghost, demon, zombie, monster, blood, gore, cartoon, anime, watermark, logo, text, blurry
+
+==============================================
+PART 6 – LOCATION 
+File Name: 06-location.txt
+
+
+Final Prompt:
+
+Ultra-realistic aerial drone view of Delhi Cantonment, New Delhi, India, showing dense green tree cover and wide roads surrounded by the Delhi cityscape, blue hour lighting, cinematic atmosphere, realistic drone photography, documentary style, Netflix-quality color grading, photorealistic, ultra-detailed, 8K, no labels, no text, no watermark.
+
+Negative Prompt:
+
+map, cartoon, illustration, ghost, horror, blood, gore, watermark, logo, text, blurry
+
+==============================================
+PART 7 – PERSON-FOG
+File Name: 07-person-fog.txt
+
+Final Prompt:
+
+Ultra-realistic cinematic night scene on Delhi Cantonment Road, New Delhi. A deserted tree-lined road covered in dense fog under warm yellow streetlights. A realistic black SUV parked on the roadside with headlights illuminating the mist. A tiny blurred human-like silhouette barely visible far in the fog, creating suspense without revealing anything supernatural. Netflix documentary style, DSLR photography, photorealistic, ultra-detailed, 8K, no text, no watermark.
+
+Negative Prompt:
+
+ghost, white lady, monster, zombie, demon, blood, gore, horror face, cartoon, anime, watermark, logo, text
+
+==============================================
+PART 8 – EMPTY  ROAD
+File Name: 08-empty-road.txt
+
+Final Prompt:
+
+Ultra-realistic cinematic midnight view of Delhi Cantonment Road, India. An empty road disappearing into dense white fog under warm yellow streetlights, surrounded by tall ancient trees forming a dark tunnel. Soft moonlight through clouds, mysterious yet realistic atmosphere, documentary photography, Netflix cinematic style, DSLR quality, photorealistic, ultra-detailed, 8K, no people, no vehicles, no text, no watermark.
+
+Negative Prompt:
+
+people, cars, ghost, zombie, demon, blood, gore, cartoon, anime, watermark, logo, text, blurry
+
+==============================================
+PART 9 – ENDING FOG
+File Name: 09-ending-fog.txt
+
+Final Prompt:
+
+Ultra-realistic cinematic ending shot of Delhi Cantonment Road at midnight. An empty tree-lined road vanishing into thick fog under warm yellow streetlights. No people, no vehicles, only silence, ancient trees, soft moonlight, dramatic clouds, photorealistic, Netflix documentary style, DSLR photography, volumetric fog, cinematic lighting, HDR, ultra-detailed, 8K, no text, no watermark.
+
+Negative Prompt:
+
+ghost, white lady, demon, zombie, monster, blood, gore, horror face, cartoon, anime, watermark, logo, text, blurry
+
+
+
+
+
+
+
+

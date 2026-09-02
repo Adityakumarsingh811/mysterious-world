@@ -1,0 +1,69 @@
+====================================================
+DELHI CANTONMENT ROAD
+STORY ORDER
+====================================================
+
+PART 1 – COVER IMAGE
+Image File : 01-cover.webp
+Title      : Delhi Cantonment Road
+Scene       : Introduction
+
+----------------------------------------------------
+
+PART 2 – DAY ROAD
+Image File : 02-day-road.webp
+Title      : Daytime View
+Scene       : A Normal Road During the Day
+
+----------------------------------------------------
+
+PART 3 – NIGHT ROAD
+Image File : 03-night-road.webp
+Title      : Night Falls
+Scene       : The Road Becomes Mysterious
+
+----------------------------------------------------
+
+PART 4 – CAR ON ROAD
+Image File : 04-car-on-road.webp
+Title      : Driving Alone
+Scene       : A Lonely Journey Begins
+
+----------------------------------------------------
+
+PART 5 – MYSTERY TREE
+Image File : 05-mystery-tree.webp
+Title      : The Mysterious Trees
+Scene       : Strange Silence Under the Trees
+
+----------------------------------------------------
+
+PART 6 – DELHI CANTONMENT LOCATION
+Image File : 06-location.webp
+Title      : Location
+Scene       : Where Is Delhi Cantonment Road?
+
+----------------------------------------------------
+
+PART 7 – PERSON IN FOG
+Image File : 07-person-fog.webp
+Title      : The Figure in the Fog
+Scene       : A Mysterious Presence
+
+----------------------------------------------------
+
+PART 8 – EMPTY ROAD
+Image File : 08-empty-road.webp
+Title      : The Silent Road
+Scene       : Dense Fog and Complete Silence
+
+----------------------------------------------------
+
+PART 9 – ENDING FOG
+Image File : 09-ending-fog.webp
+Title      : Unsolved Mystery
+Scene       : The End... Or Just Another Beginning?
+
+====================================================
+END OF STORY
+====================================================
