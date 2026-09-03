@@ -1,0 +1,497 @@
+﻿DOW HILL MYSTERY WEBSITE
+
+Master Project Notes (Production Ready)
+
+---
+
+PROJECT INFORMATION
+
+Project Name: Dow Hill Mystery Website
+
+Author: Aditya Kumar Singh
+
+Project Version: 1.0 Final
+
+Language: Hindi
+
+Category: Mystery • History • Folklore • Documentary • Travel
+
+Status: Production Ready
+
+Last Updated: August 2026
+
+---
+
+PROJECT MISSION
+
+यह वेबसाइट केवल एक Horror Story Website नहीं है।
+
+इसका उद्देश्य भारत की सबसे Professional Hindi Mystery Documentary Website बनाना है, जहाँ प्रत्येक लेख तथ्यों, इतिहास, स्थानीय लोककथाओं और वैज्ञानिक दृष्टिकोण के संतुलन के साथ प्रस्तुत किया जाए।
+
+Reader को ऐसा अनुभव होना चाहिए जैसे वह Netflix, Discovery या National Geographic स्तर की Documentary पढ़ रहा हो।
+
+---
+
+MAIN OBJECTIVES
+
+• High Quality Storytelling
+
+• Historical Accuracy
+
+• Responsible Presentation
+
+• Scientific Perspective
+
+• Reader Engagement
+
+• Premium Visual Experience
+
+• Excellent SEO Performance
+
+• Fast Loading Website
+
+• Mobile Friendly Design
+
+• Long Form Documentary Content
+
+---
+
+TARGET AUDIENCE
+
+Age Group
+
+15–45 Years
+
+Interested Readers
+
+• Mystery Lovers
+
+• Horror Enthusiasts
+
+• History Readers
+
+• Travel Lovers
+
+• Documentary Fans
+
+• Students
+
+• Researchers
+
+---
+
+WEBSITE THEME
+
+Theme
+
+Dark Documentary
+
+Design Style
+
+Minimal
+
+Premium
+
+Elegant
+
+Immersive
+
+Netflix Inspired
+
+National Geographic Inspired
+
+Discovery Documentary Feel
+
+---
+
+COLOR PALETTE
+
+Background
+
+#0D0D0D
+
+Primary Text
+
+#FFFFFF
+
+Secondary Text
+
+#BDBDBD
+
+Accent Color
+
+#D4AF37
+
+Hover Accent
+
+#FFD54F
+
+---
+
+WRITING STYLE
+
+Every article should feel like a documentary.
+
+Writing should be—
+
+• Cinematic
+
+• Emotional
+
+• Informative
+
+• Suspenseful
+
+• Easy to Read
+
+• Fact Based
+
+• Respectful
+
+• SEO Friendly
+
+---
+
+WRITING RULES
+
+Always separate Facts from Folklore.
+
+Never present paranormal claims as confirmed facts.
+
+Use phrases like—
+
+"स्थानीय लोककथाओं के अनुसार..."
+
+"कुछ लोगों का दावा है..."
+
+"इसका कोई आधिकारिक प्रमाण उपलब्ध नहीं है..."
+
+Maintain suspense without spreading misinformation.
+
+Respect local culture and history.
+
+End every chapter with a strong cliffhanger.
+
+---
+
+ARTICLE STRUCTURE
+
+Powerful Opening
+
+Historical Background
+
+Storytelling
+
+Folklore
+
+Scientific Explanation
+
+Myth vs Fact
+
+Reader Hook
+
+Next Chapter Teaser
+
+Conclusion
+
+---
+
+DOW HILL ARTICLE STRUCTURE
+
+Chapter 1
+
+Introduction
+
+Chapter 2
+
+History
+
+Chapter 3
+
+Death Road
+
+Chapter 4
+
+Headless Boy
+
+Chapter 5
+
+Grey Lady
+
+Chapter 6
+
+Science Behind Mystery
+
+Chapter 7
+
+Eyewitness Stories
+
+Chapter 8
+
+Travel Guide
+
+Chapter 9
+
+Myth vs Fact
+
+Chapter 10
+
+Final Verdict
+
+---
+
+IMAGE GUIDELINES
+
+Total Images
+
+21
+
+Quality
+
+Ultra Realistic
+
+Documentary Photography
+
+Natural Lighting
+
+Sony A7R V
+
+35mm Lens
+
+HDR
+
+RAW Photography
+
+Realistic Atmosphere
+
+True-to-life Colors
+
+8K Resolution
+
+No CGI
+
+No Cartoon
+
+No Artificial Horror
+
+No Watermark
+
+---
+
+HERO IMAGE STYLE
+
+Wide Cinematic Landscape
+
+Dense Pine Forest
+
+Natural Himalayan Fog
+
+Golden Light Through Trees
+
+Lonely Mountain Road
+
+Professional Documentary Photography
+
+No Human Subject
+
+No Ghost
+
+No Fantasy
+
+Premium Cover Image
+
+---
+
+THUMBNAIL STYLE
+
+Large Bold Title
+
+Dark Forest Background
+
+High Contrast
+
+Minimal Text
+
+Strong Emotional Impact
+
+Professional Composition
+
+---
+
+AUDIO STYLE
+
+Deep Calm Voice
+
+Slow Documentary Narration
+
+Natural Breathing
+
+Clear Hindi Pronunciation
+
+Soft Background Ambience
+
+Forest Wind
+
+Birds
+
+Light Atmospheric Music
+
+No Loud Horror Sound Effects
+
+---
+
+SEO STRATEGY
+
+Primary Keyword
+
+Dow Hill Mystery
+
+Secondary Keywords
+
+Dow Hill Haunted
+
+Dow Hill Kurseong
+
+Death Road Dow Hill
+
+Victoria Boys School
+
+Dow Hill History
+
+Headless Boy
+
+Grey Lady
+
+Dow Hill Facts
+
+Dow Hill Horror Story
+
+Dow Hill West Bengal
+
+---
+
+WEBSITE FEATURES
+
+Dark Mode
+
+Responsive Layout
+
+Fast Loading
+
+Reading Progress Bar
+
+Image Gallery
+
+Table of Contents
+
+FAQ
+
+Related Articles
+
+Comment Section
+
+Search Box
+
+Share Buttons
+
+Back To Top Button
+
+---
+
+PROJECT FOLDER STRUCTURE
+
+Dow Hill/
+
+images/
+
+notes/
+
+prompts/
+
+script/
+
+thumbnail/
+
+audio/
+
+index.html
+
+---
+
+FUTURE CONTENT IDEAS
+
+Delhi Cantonment
+
+Bhangarh Fort
+
+Kuldhara Village
+
+Dumas Beach
+
+Lambi Dehar Mines
+
+Jatinga Mystery
+
+Roopkund Lake
+
+Shaniwar Wada
+
+Fernhill Hotel
+
+GP Block Meerut
+
+---
+
+QUALITY CHECKLIST
+
+✓ Grammar Checked
+
+✓ Story Flow Completed
+
+✓ Historical Review Completed
+
+✓ Folklore Clearly Identified
+
+✓ Scientific Perspective Added
+
+✓ Myth vs Fact Included
+
+✓ SEO Structure Ready
+
+✓ Mobile Reading Friendly
+
+✓ Image Prompts Completed
+
+✓ Production Ready
+
+---
+
+FINAL VISION
+
+हमारा लक्ष्य केवल Readers को डराना नहीं है।
+
+हम उन्हें सोचने पर मजबूर करना चाहते हैं।
+
+हर Mystery Article में—
+
+इतिहास होगा।
+
+विज्ञान होगा।
+
+लोककथाएँ होंगी।
+
+और सबसे महत्वपूर्ण—
+
+सच्चाई के प्रति ईमानदारी होगी।
+
+यही इस वेबसाइट की सबसे बड़ी पहचान होगी।
+
+---
+
+Project Status: ✅ Production Ready
+
+Content Version: v1.0 Final
+
+Overall Quality Standard: Premium Mystery Documentary Website
+
+Mission: Build India's Best Hindi Mystery Documentary Website.
