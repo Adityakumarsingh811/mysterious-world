@@ -600,7 +600,7 @@ alert("Follow function चल रहा है");
                 site: "delhi-cantonment-road"
             }
         ]);
-
+alert("Supabase response: " + JSON.stringify({data, error}));
     if (error) {
         console.error("Follow Error:", error);
         message.textContent = "❌ कुछ समस्या हुई। कृपया फिर कोशिश करें।";
