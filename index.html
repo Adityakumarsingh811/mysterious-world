@@ -585,11 +585,15 @@ alert("Follow function चल रहा है");
         return;
     }
 
+
+
     // Basic email validation
     if (!email.includes("@") || !email.includes(".")) {
         message.textContent = "⚠️ कृपया सही Email डालें।";
         return;
     }
+
+alert("अब Supabase को call करने वाला हूँ");
 
     // Supabase में follower save करना
     const { data, error } = await supabaseClient
