@@ -36,14 +36,18 @@ upabase/supabase-js@2"></script>
 <script>
     const SUPABASE_URL = 
 
-"https://ukuewpvngrywjikpwihn.supabase.co/rest/v1/";
+"https://ukuewpvngrywjikpwihn.supa
+
+base.co/rest/v1/";
 
     const 
 
 SUPABASE_PUBLISHABLE_KEY =
         
 
-"sb_publishable_FavekjziArMUybcNOxBxyA_zMr2mfDQ";
+"sb_publishable_FavekjziArMUybcN
+
+OxBxyA_zMr2mfDQ";
 
     const supabaseClient = 
 
@@ -288,17 +292,81 @@ repeat(auto-fit, minmax(280px,
         }
 
         /* Follow Website */
-        .follow-section { background:#14141e; border:1px solid #2a2a3a; border-left:5px solid #ff2a4b; border-radius:12px; padding:22px; margin-bottom:35px; text-align:center; }
-        .follow-section h2 { color:#ffb400; margin-bottom:10px; font-size:1.5rem; }
-        .follow-section > p { color:#a0a0b0; margin-bottom:15px; line-height:1.6; }
-        .follow-form { display:flex; gap:10px; justify-content:center; align-items:center; flex-wrap:wrap; }
-        .follow-form input { flex:1; min-width:220px; max-width:500px; padding:12px 14px; border:1px solid #2a2a3a; border-radius:8px; background:#0f0f17; color:#fff; outline:none; font-size:1rem; }
-        .follow-form input:focus { border-color:#ff2a4b; }
-        .follow-form button { padding:12px 20px; border:none; border-radius:8px; background:#ff2a4b; color:#fff; font-weight:bold; cursor:pointer; font-size:1rem; }
-        .follow-form button:hover { background:#ff4560; }
-        .follow-form button:disabled { opacity:.7; cursor:not-allowed; }
-        #followMessage { min-height:24px; margin-top:12px; margin-bottom:0; color:#fff; }
-        @media (max-width:600px) { .follow-form { flex-direction:column; } .follow-form input, .follow-form button { width:100%; max-width:none; } }
+        .follow-section { 
+
+background:#14141e; border:1px 
+
+solid #2a2a3a; border-left:5px solid 
+
+#ff2a4b; border-radius:12px; 
+
+padding:22px; margin-bottom:35px; 
+
+text-align:center; }
+        .follow-section h2 { 
+
+color:#ffb400; margin-bottom:10px; 
+
+font-size:1.5rem; }
+        .follow-section > p { 
+
+color:#a0a0b0; margin-
+
+bottom:15px; line-height:1.6; }
+        .follow-form { display:flex; 
+
+gap:10px; justify-content:center; 
+
+align-items:center; flex-wrap:wrap; 
+
+}
+        .follow-form input { flex:1; 
+
+min-width:220px; max-
+
+width:500px; padding:12px 14px; 
+
+border:1px solid #2a2a3a; border-
+
+radius:8px; background:#0f0f17; 
+
+color:#fff; outline:none; font-
+
+size:1rem; }
+        .follow-form input:focus { 
+
+border-color:#ff2a4b; }
+        .follow-form button { 
+
+padding:12px 20px; border:none; 
+
+border-radius:8px; 
+
+background:#ff2a4b; color:#fff; 
+
+font-weight:bold; cursor:pointer; 
+
+font-size:1rem; }
+        .follow-form button:hover { 
+
+background:#ff4560; }
+        .follow-form button:disabled { 
+
+opacity:.7; cursor:not-allowed; }
+        #followMessage { min-
+
+height:24px; margin-top:12px; 
+
+margin-bottom:0; color:#fff; }
+        @media (max-width:600px) { 
+
+.follow-form { flex-
+
+direction:column; } .follow-form 
+
+input, .follow-form button { 
+
+width:100%; max-width:none; } }
     </style>
 </head>
 <body>
@@ -318,12 +386,26 @@ class="subtitle">Mysterious World
 
 <div class="follow-section">
     <h2>🔔 Follow Website</h2>
-    <p>नई Mystery Stories और Updates के लिए Follow करें</p>
+    <p>नई Mystery Stories और 
+
+Updates के लिए Follow करें</p>
     <div class="follow-form">
-        <input type="email" id="followEmail" placeholder="अपना Email डालें" autocomplete="email">
-        <button type="button" id="followButton" onclick="followWebsite()">🔔 Follow</button>
+        <input type="email" 
+
+id="followEmail" placeholder="अपना 
+
+Email डालें" autocomplete="email">
+        <button type="button" 
+
+id="followButton" 
+
+onclick="followWebsite()">🔔 
+
+Follow</button>
     </div>
-    <p id="followMessage" role="status" aria-live="polite"></p>
+    <p id="followMessage" 
+
+role="status" aria-live="polite"></p>
 </div>
 
         <!-- Main Banner -->
@@ -1110,37 +1192,81 @@ Project | Netlify Ready Deployment
 
 <script>
 async function followWebsite() {
-    const emailInput = document.getElementById("followEmail");
-    const message = document.getElementById("followMessage");
-    const button = document.getElementById("followButton");
-    const email = emailInput.value.trim();
+    const emailInput = 
 
-    if (!email) { message.textContent = "⚠️ कृपया अपना Email डालें।"; return; }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { message.textContent = "⚠️ कृपया सही Email डालें।"; return; }
+document.getElementById
+
+("followEmail");
+    const message = 
+
+document.getElementById
+
+("followMessage");
+    const button = 
+
+document.getElementById
+
+("followButton");
+    const email = 
+
+emailInput.value.trim();
+
+    if (!email) { message.textContent 
+
+= "⚠️ कृपया अपना Email डालें।"; return; }
+    if (!/^[^\s@]+@[^\s@]+\.
+
+[^\s@]+$/.test(email)) { 
+
+message.textContent = "⚠️ कृपया सही 
+
+Email डालें।"; return; }
 
     button.disabled = true;
-    button.textContent = "Following...";
-    message.textContent = "⏳ Please wait...";
+    button.textContent = 
+
+"Following...";
+    message.textContent = "⏳ Please 
+
+wait...";
 
     try {
-        const { error } = await supabaseClient
+        const { error } = await 
+
+supabaseClient
             .from("followers")
-            .insert([{ email: email, site: "delhi-cantonment-road" }]);
+            .insert([{ email: email, site: 
+
+"delhi-cantonment-road" }]);
 
         if (error) {
-            console.error("Supabase Error:", error);
-            message.textContent = "❌ Follow नहीं हो पाया। कृपया दोबारा कोशिश करें।";
+            console.error("Supabase 
+
+Error:", error);
+            message.textContent = "❌ 
+
+Follow नहीं हो पाया। कृपया दोबारा कोशिश करें।";
             return;
         }
 
-        message.textContent = "✅ आपने Website Follow कर ली है!";
+        message.textContent = "✅ आपने 
+
+Website Follow कर ली है!";
         emailInput.value = "";
     } catch (error) {
-        console.error("Unexpected Error:", error);
-        message.textContent = "❌ कुछ समस्या हुई। कृपया Internet connection check करें।";
+        console.error("Unexpected 
+
+Error:", error);
+        message.textContent = "❌ कुछ 
+
+समस्या हुई। कृपया Internet connection 
+
+check करें।";
     } finally {
         button.disabled = false;
-        button.textContent = "🔔 Follow";
+        button.textContent = "🔔 
+
+Follow";
     }
 }
 </script>
