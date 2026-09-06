@@ -21,43 +21,13 @@ verification"
 content="VjWo8UAULOYgXfZndZ_hi
 
 hFvuvFL-kSvhXNtsrFQRig" />
-<script defer 
 
-src="/_vercel/insights/script.js"></s
-
-cript>
 
 <script 
 
-src="https://cdn.jsdelivr.net/npm/@s
+src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-upabase/supabase-js@2"></script>
-
-<script>
-    const SUPABASE_URL = 
-
-"https://ukuewpvngrywjikpwihn.supa
-
-base.co/rest/v1/";
-
-    const 
-
-SUPABASE_PUBLISHABLE_KEY =
-        
-
-"sb_publishable_FavekjziArMUybcN
-
-OxBxyA_zMr2mfDQ";
-
-    const supabaseClient = 
-
-window.supabase.createClient(
-        SUPABASE_URL,
-        
-
-SUPABASE_PUBLISHABLE_KEY
-    );
-</script>
+<script> const SUPABASE_URL = "https://ukuewpvngrywjikpwihn.supabase.co"; const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_FavekjziArMUybcNOxBxyA_zMr2mfDQ"; const supabaseClient = window.supabase.createClient( SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY ); </script>
 
 
     <style>
@@ -1190,86 +1160,7 @@ Project | Netlify Ready Deployment
         </footer>
     </div>
 
-<script>
-async function followWebsite() {
-    const emailInput = 
-
-document.getElementById
-
-("followEmail");
-    const message = 
-
-document.getElementById
-
-("followMessage");
-    const button = 
-
-document.getElementById
-
-("followButton");
-    const email = 
-
-emailInput.value.trim();
-
-    if (!email) { message.textContent 
-
-= "⚠️ कृपया अपना Email डालें।"; return; }
-    if (!/^[^\s@]+@[^\s@]+\.
-
-[^\s@]+$/.test(email)) { 
-
-message.textContent = "⚠️ कृपया सही 
-
-Email डालें।"; return; }
-
-    button.disabled = true;
-    button.textContent = 
-
-"Following...";
-    message.textContent = "⏳ Please 
-
-wait...";
-
-    try {
-        const { error } = await 
-
-supabaseClient
-            .from("followers")
-            .insert([{ email: email, site: 
-
-"delhi-cantonment-road" }]);
-
-        if (error) {
-            console.error("Supabase 
-
-Error:", error);
-            message.textContent = "❌ 
-
-Follow नहीं हो पाया। कृपया दोबारा कोशिश करें।";
-            return;
-        }
-
-        message.textContent = "✅ आपने 
-
-Website Follow कर ली है!";
-        emailInput.value = "";
-    } catch (error) {
-        console.error("Unexpected 
-
-Error:", error);
-        message.textContent = "❌ कुछ 
-
-समस्या हुई। कृपया Internet connection 
-
-check करें।";
-    } finally {
-        button.disabled = false;
-        button.textContent = "🔔 
-
-Follow";
-    }
-}
-</script>
+<script> async function followWebsite() { const emailInput = document.getElementById ("followEmail"); const message = document.getElementById ("followMessage"); const button = document.getElementById ("followButton"); const email = emailInput.value.trim(); if (!email) { message.textContent = "⚠️ कृपया अपना Email डालें।"; return; } if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { message.textContent = "⚠️ कृपया सही Email डालें।"; return; } button.disabled = true; button.textContent = "Following..."; message.textContent = "⏳ Please wait..."; try { const { error } = await supabaseClient .from("followers") .insert([{ email: email, site: "delhi-cantonment-road" }]); if (error) { console.error("Supabase Error:", error); message.textContent = "❌ Follow नहीं हो पाया। कृपया दोबारा कोशिश करें।"; return; } message.textContent = "✅ आपने Website Follow कर ली है!"; emailInput.value = ""; } catch (error) { console.error("Unexpected Error:", error); message.textContent = "❌ कुछ समस्या हुई। कृपया Internet connection check करें।"; } finally { button.disabled = false; button.textContent = "🔔 Follow"; } } </script>
 
 </body>
 </html>
