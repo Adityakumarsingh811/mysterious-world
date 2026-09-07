@@ -332,6 +332,21 @@ function supabaseRequest(method, table, query, body, callback) {
             border-top: 1px solid #222233;
         }
 
+.hero-thumbnail {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.hero-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
         @media (max-width:600px) {
             h1 { font-size: 1.6rem; }
             .follow-form { flex-direction:column; }
@@ -348,6 +363,15 @@ function supabaseRequest(method, table, query, body, callback) {
             <p class="subtitle">Mysterious World — Urban Legend Archives</p>
         </header>
 
+
+</header>
+
+<div class="hero-thumbnail">
+    <img src="thumbnail/thumbnail.png" alt="दिल्ली कैंटोनमेंट रोड का रहस्य">
+</div>
+
+<div class="main-layout">
+
         <div class="follow-section">
             <h2>🔔 Follow Website</h2>
             <p>नई Mystery Stories और Updates के लिए Follow करें</p>
@@ -358,11 +382,7 @@ function supabaseRequest(method, table, query, body, callback) {
             <p id="followMessage" role="status" aria-live="polite"></p>
         </div>
 
-        <!-- Main Banner -->
-        <div class="banner-card">
-            <img src="images/1.png" alt="Delhi Cantonment Cover" loading="lazy">
-        </div>
-
+       
         <!-- Scripts Section -->
         <div class="section-title">📜 Voiceover Scripts (3 Parts)</div>
         <div class="script-container">
