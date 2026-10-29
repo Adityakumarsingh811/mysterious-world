@@ -623,9 +623,8 @@ Dow Hill: एक जगह नहीं... एक अनुभव। जहा�
             &copy; 2026 Mysterious World Project | Vercel Deployment Ready
         </footer>
     </div>
-
 <script>
-var scriptURL = "https://script.google.com/macros/s/AKfycbyfL5aOJg6k6ZCVthTI0WRu_dzotZyDY6PehZ-aNbMcNOyEb33Ffc4ndATGg0Q3rQ/exec";
+var scriptURL = "https://script.google.com/macros/s/AKfycbxMWx8ixOU8N0MQKob0ZVSr5n-XVANv_tnoVNXhDY-W9qGagZx4e-Vnwbrtlsio-DM/exec";
 
 function followWebsite() {
     var emailInput = document.getElementById("followEmail");
@@ -689,6 +688,9 @@ function submitComment(event) {
         commentInput.value = "";
         button.disabled = false;
         button.textContent = "💬 Comment Post करें";
+        
+        // Comment post hone ke 1.5 sec baad comments reload ho jayenge
+        setTimeout(loadComments, 1500);
     })
     .catch(error => {
         console.error("Error:", error);
@@ -700,9 +702,44 @@ function submitComment(event) {
     return false;
 }
 
+// Google Sheet se Live Comments Load karne ka Function
 function loadComments() {
     var list = document.getElementById("commentsList");
-    list.innerHTML = '<div class="no-comments">💬 आपके comments सीधे Google Sheet में सुरक्षित हो रहे हैं!</div>';
+    
+    fetch(scriptURL)
+    .then(response => response.json())
+    .then(data => {
+        list.innerHTML = "";
+        if (!data || data.length === 0) {
+            list.innerHTML = '<div class="no-comments">अभी कोई Comment नहीं है। पहला Comment आप करें! 👇</div>';
+            return;
+        }
+        data.forEach(item => {
+            var card = document.createElement("div");
+            card.className = "comment-card";
+            
+            var name = document.createElement("div");
+            name.className = "comment-name";
+            name.textContent = "👤 " + (item.name || "Anonymous");
+            
+            var text = document.createElement("div");
+            text.className = "comment-text";
+            text.textContent = item.comment || "";
+            
+            var date = document.createElement("div");
+            date.className = "comment-date";
+            date.textContent = item.date ? new Date(item.date).toLocaleString("hi-IN") : "";
+            
+            card.appendChild(name);
+            card.appendChild(text);
+            card.appendChild(date);
+            list.appendChild(card);
+        });
+    })
+    .catch(err => {
+        console.error("Comments Fetch Error:", err);
+        list.innerHTML = '<div class="no-comments">Comments load nahi ho paye.</div>';
+    });
 }
 
 window.onload = function () { loadComments(); };
