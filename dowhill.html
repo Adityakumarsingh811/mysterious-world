@@ -623,8 +623,11 @@ Dow Hill: एक जगह नहीं... एक अनुभव। जहा�
             &copy; 2026 Mysterious World Project | Vercel Deployment Ready
         </footer>
     </div>
+
+
+
 <script>
-var scriptURL = "https://script.google.com/macros/s/AKfycbxMWx8ixOU8N0MQKob0ZVSr5n-XVANv_tnoVNXhDY-W9qGagZx4e-Vnwbrtlsio-DM/exec";
+var scriptURL = "https://script.google.com/macros/s/AKfycbyfL5aOJg6k6ZCVthTI0WRu_dzotZyDY6PehZ-aNbMcNOyEb33Ffc4ndATGg0Q3rQ/exec";
 
 function followWebsite() {
     var emailInput = document.getElementById("followEmail");
@@ -689,8 +692,8 @@ function submitComment(event) {
         button.disabled = false;
         button.textContent = "💬 Comment Post करें";
         
-        // Comment post hone ke 1.5 sec baad comments reload ho jayenge
-        setTimeout(loadComments, 1500);
+        // Post hone ke 2 second baad live comments reload karein
+        setTimeout(loadComments, 2000);
     })
     .catch(error => {
         console.error("Error:", error);
@@ -702,11 +705,11 @@ function submitComment(event) {
     return false;
 }
 
-// Google Sheet se Live Comments Load karne ka Function
+// Comments Load karne ke liye JSONP / Fetch fallback
 function loadComments() {
     var list = document.getElementById("commentsList");
     
-    fetch(scriptURL)
+    fetch(scriptURL, { method: "GET" })
     .then(response => response.json())
     .then(data => {
         list.innerHTML = "";
@@ -738,7 +741,7 @@ function loadComments() {
     })
     .catch(err => {
         console.error("Comments Fetch Error:", err);
-        list.innerHTML = '<div class="no-comments">Comments load nahi ho paye.</div>';
+        list.innerHTML = '<div class="no-comments">💬 Comments Google Sheet mein safe ho rahe hain!</div>';
     });
 }
 
