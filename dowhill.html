@@ -10,36 +10,7 @@
     <!-- Font Awesome Icons Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <script>
-    var SUPABASE_URL = "https://ukuewpvngrywjikpwihn.supabase.co";
-    var SUPABASE_PUBLISHABLE_KEY = "sb_publishable_FavekjziArMUybcNOxBxyA_zMr2mfDQ";
-    var SUPABASE_REST_URL = SUPABASE_URL + "/rest/v1";
-
-    function supabaseRequest(method, table, query, body, callback) {
-        var xhr = new XMLHttpRequest();
-        var url = SUPABASE_REST_URL + "/" + table + (query || "");
-        xhr.open(method, url, true);
-        xhr.setRequestHeader("apikey", SUPABASE_PUBLISHABLE_KEY);
-        xhr.setRequestHeader("Authorization", "Bearer " + SUPABASE_PUBLISHABLE_KEY);
-        xhr.setRequestHeader("Content-Type", "application/json");
-        if (method === "POST") xhr.setRequestHeader("Prefer", "return=minimal");
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState !== 4) return;
-            var ok = xhr.status >= 200 && xhr.status < 300;
-            var data = null;
-            var error = null;
-            if (xhr.responseText) {
-                try { data = JSON.parse(xhr.responseText); } catch (e) {}
-            }
-            if (!ok) error = { status: xhr.status, message: xhr.responseText || "Request failed" };
-            callback(data, error);
-        };
-        xhr.onerror = function () { callback(null, { status: 0, message: "Network error" }); };
-        xhr.send(body ? JSON.stringify(body) : null);
-    }
-    </script>
-
-    <style>
+        <style>
         :root {
             --bg-color: #07090e;
             --card-bg: #12151e;
@@ -654,6 +625,8 @@ Dow Hill: एक जगह नहीं... एक अनुभव। जहा�
     </div>
 
 <script>
+var scriptURL = "https://script.google.com/macros/s/AKfycbyfL5aOJg6k6ZCVthTI0WRu_dzotZyDY6PehZ-aNbMcNOyEb33Ffc4ndATGg0Q3rQ/exec";
+
 function followWebsite() {
     var emailInput = document.getElementById("followEmail");
     var message = document.getElementById("followMessage");
@@ -667,14 +640,21 @@ function followWebsite() {
     button.textContent = "Following...";
     message.textContent = "⏳ Please wait...";
 
-    supabaseRequest("POST", "followers", "", [{ email: email, site: "dow-hill" }], function (data, error) {
-        if (error) {
-            console.error("Supabase Error:", error);
-            message.textContent = "❌ Follow नहीं हो पाया। कृपया दोबारा कोशिश करें।";
-        } else {
-            message.textContent = "✅ आपने Website Follow कर ली है!";
-            emailInput.value = "";
-        }
+    fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: "follow", email: email })
+    })
+    .then(() => {
+        message.textContent = "✅ आपने Website Follow कर ली है!";
+        emailInput.value = "";
+        button.disabled = false;
+        button.textContent = "🔔 Follow";
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        message.textContent = "❌ Follow नहीं हो पाया। कृपया दोबारा कोशिश करें।";
         button.disabled = false;
         button.textContent = "🔔 Follow";
     });
@@ -697,64 +677,37 @@ function submitComment(event) {
     button.textContent = "Posting...";
     message.textContent = "⏳ Comment post हो रहा है...";
 
-    supabaseRequest("POST", "comments", "", [{ name: name, comment: comment, site: "dow-hill" }], function (data, error) {
-        if (error) {
-            console.error("Supabase Comment Error:", error);
-            message.textContent = "❌ Comment post नहीं हुआ। कृपया दोबारा कोशिश करें।";
-        } else {
-            message.textContent = "✅ आपका Comment successfully post हो गया!";
-            nameInput.value = "";
-            commentInput.value = "";
-            loadComments();
-        }
+    fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: "comment", name: name, comment: comment })
+    })
+    .then(() => {
+        message.textContent = "✅ आपका Comment successfully post हो गया!";
+        nameInput.value = "";
+        commentInput.value = "";
+        button.disabled = false;
+        button.textContent = "💬 Comment Post करें";
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        message.textContent = "❌ Comment post नहीं हुआ। कृपया दोबारा कोशिश करें।";
         button.disabled = false;
         button.textContent = "💬 Comment Post करें";
     });
+
     return false;
 }
 
 function loadComments() {
     var list = document.getElementById("commentsList");
-    var query = "?select=name,comment,created_at&site=eq.dow-hill&order=created_at.desc";
-
-    supabaseRequest("GET", "comments", query, null, function (data, error) {
-        if (error) {
-            console.error("Supabase Load Comments Error:", error);
-            list.innerHTML = '<div class="no-comments">Comments load नहीं हो पाए।</div>';
-            return;
-        }
-        list.innerHTML = "";
-        if (!data || data.length === 0) {
-            list.innerHTML = '<div class="no-comments">अभी कोई Comment नहीं है। पहला Comment आप करें! 👇</div>';
-            return;
-        }
-        for (var i = 0; i < data.length; i++) {
-            var item = data[i];
-            var card = document.createElement("div");
-            card.className = "comment-card";
-            
-            var name = document.createElement("div");
-            name.className = "comment-name";
-            name.textContent = "👤 " + (item.name || "Anonymous");
-            
-            var text = document.createElement("div");
-            text.className = "comment-text";
-            text.textContent = item.comment || "";
-            
-            var date = document.createElement("div");
-            date.className = "comment-date";
-            date.textContent = item.created_at ? new Date(item.created_at).toLocaleString("hi-IN") : "";
-            
-            card.appendChild(name);
-            card.appendChild(text);
-            card.appendChild(date);
-            list.appendChild(card);
-        }
-    });
+    list.innerHTML = '<div class="no-comments">💬 आपके comments सीधे Google Sheet में सुरक्षित हो रहे हैं!</div>';
 }
 
 window.onload = function () { loadComments(); };
 </script>
+
 
 </body>
 </html>
