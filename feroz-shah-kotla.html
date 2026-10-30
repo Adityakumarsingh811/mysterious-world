@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
@@ -1275,21 +1275,26 @@ A: यह ASI द्वारा संरक्षित सरकारी प
     </footer>
 
     <!-- Follow Modal Window -->
+    
+<!-- Follow Modal Window -->
     <div class="modal-overlay" id="followModal">
         <div class="modal-card">
             <button class="modal-close" onclick="document.getElementById('followModal').style.display='none'">&times;</button>
             <h3>Get Historical Updates</h3>
             <p>ऐतिहासिक दस्तावेज़ों और रहस्यों से जुड़ी नई जानकारियों के लिए अपना ईमेल दर्ज करें:</p>
             <form class="modal-form" id="subscribeForm">
-                <input type="text" class="modal-input" placeholder="आपका नाम" required>
-                <input type="email" class="modal-input" placeholder="आपका ईमेल पता" required>
+                <input type="text" class="modal-input" id="followName" placeholder="आपका नाम" required>
+                <input type="email" class="modal-input" id="followEmail" placeholder="आपका ईमेल पता" required>
                 <button type="submit" class="modal-submit">Subscribe Now</button>
             </form>
             <div style="display:none; color:#10b981; text-align:center; margin-top:10px; font-weight:bold;" id="successMsg">✨ धन्यवाद! आपका ईमेल सबमिट हो गया है।</div>
         </div>
     </div>
 
-    <!-- Comment Modal Window -->
+
+
+
+<!-- Comment Modal Window -->
     <div class="modal-overlay" id="commentModal">
         <div class="modal-card">
             <button class="modal-close" onclick="document.getElementById('commentModal').style.display='none'">&times;</button>
@@ -1302,159 +1307,124 @@ A: यह ASI द्वारा संरक्षित सरकारी प
             </form>
         </div>
     </div>
+    
+<script>
+    var scriptURL = "https://script.google.com/macros/s/AKfycbyfL5aOJg6k6ZCVthTI0WRu_dzotZyDY6PehZ-aNbMcNOyEb33Ffc4ndATGg0Q3rQ/exec";
 
-    <script>
-        // Gallery Images path generator
-        const grid = document.getElementById('imageGrid');
-        for (let i = 1; i <= 62; i++) {
-            const item = document.createElement('div');
-            item.className = 'gallery-item';
-            
-            const img = document.createElement('img');
-            img.src = `imagef/${i}f.png`;
-            img.alt = `imagef/${i}f.png`;
-            
-            item.appendChild(img);
-            
-            const label = document.createElement('span');
-            label.innerText = `imagef/${i}f.png`;
-            item.appendChild(label);
-            
-            grid.appendChild(item);
-        }
+    // Modal Handlers
+    const followModal = document.getElementById('followModal');
+    const commentModal = document.getElementById('commentModal');
 
-        // Follow Modal Logic
-        const followModal = document.getElementById('followModal');
-        document.getElementById('openModalBtn').addEventListener('click', () => followModal.style.display = 'flex');
-        
-        document.getElementById('subscribeForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            document.getElementById('subscribeForm').style.display = 'none';
-            document.getElementById('successMsg').style.display = 'block';
+    document.getElementById('openModalBtn').addEventListener('click', () => followModal.style.display = 'flex');
+    document.getElementById('openCommentModalBtn').addEventListener('click', () => commentModal.style.display = 'flex');
+
+    // Follow / Subscribe Form Submission
+    document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var nameInput = document.getElementById('followName');
+        var emailInput = document.getElementById('followEmail');
+        var name = nameInput ? nameInput.value.trim() : "";
+        var email = emailInput ? emailInput.value.trim() : "";
+        var successMsg = document.getElementById('successMsg');
+
+        if (!email) return;
+
+        fetch(scriptURL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ type: "follow", name: name, email: email })
+        })
+        .then(() => {
+            if(successMsg) successMsg.style.display = 'block';
+            this.reset();
             setTimeout(() => {
                 followModal.style.display = 'none';
-                document.getElementById('subscribeForm').reset();
-                document.getElementById('subscribeForm').style.display = 'flex';
-                document.getElementById('successMsg').style.display = 'none';
+                if(successMsg) successMsg.style.display = 'none';
             }, 2000);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("❌ Follow nahi ho paya. Dobara koshish karein.");
         });
+    });
 
-        // Comment Modal Logic
-        
+    // Comment Form Submission
+    document.getElementById('commentForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var nameInput = document.getElementById('commenterName');
+        var commentInput = document.getElementById('commenterText');
+        var name = nameInput ? nameInput.value.trim() : "";
+        var comment = commentInput ? commentInput.value.trim() : "";
 
-// Comment Modal Logic
+        if (!name || !comment) return;
 
-const commentModal = document.getElementById('commentModal');
-
-// ऊपर वाला "Add Comment" button
-document.getElementById('openCommentModalBtn').addEventListener('click', () => {
-    commentModal.style.display = 'flex';
-});
-
-
-// Comment Form
-document.getElementById('commentForm').addEventListener('submit', (e) => {
-
-    e.preventDefault();
-
-    const name = document.getElementById('commenterName').value;
-    const text = document.getElementById('commenterText').value;
-
-    const container = document.getElementById('commentsContainer');
-
-    const newComment = document.createElement('div');
-
-    newComment.className = 'comment-item';
-
-    newComment.innerHTML = `
-        <div class="comment-header">
-            <span class="comment-author">${name}</span>
-            <span class="comment-date">अभी-अभी</span>
-        </div>
-
-        <div class="comment-text">${text}</div>
-    `;
-
-    container.prepend(newComment);
-
-    commentModal.style.display = 'none';
-
-    document.getElementById('commentForm').reset();
-});
-
-
-// बाहर क्लिक करने पर modal बंद
-window.addEventListener('click', (e) => {
-
-    if (e.target === commentModal) {
-        commentModal.style.display = 'none';
-    }
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-window.addEventListener('click', (e) => {
-    if (e.target === commentModal) {
-        commentModal.style.display = 'none';
-    }
-});
-
-
-       // Comment Form
-document.getElementById('commentForm').addEventListener('submit', function(e) {
-
-    e.preventDefault();
-
-    const name = document.getElementById('commenterName').value.trim();
-    const text = document.getElementById('commenterText').value.trim();
-
-    if (name === '' || text === '') {
-        alert('Please enter your name and comment.');
-        return;
-    }
-
-    const container = document.getElementById('commentsContainer');
-
-    const newComment = document.createElement('div');
-
-    newComment.className = 'comment-item';
-
-    newComment.innerHTML = `
-        <div class="comment-header">
-            <span class="comment-author">${name}</span>
-            <span class="comment-date">अभी-अभी</span>
-        </div>
-
-        <div class="comment-text">${text}</div>
-    `;
-
-    container.insertBefore(newComment, container.firstChild);
-
-    // Modal close
-    document.getElementById('commentModal').style.display = 'none';
-
-    // Form clear
-    document.getElementById('commentForm').reset();
-
-});
-
-        // Close modal on outside click
-        window.addEventListener('click', (e) => {
-            if (e.target === followModal) followModal.style.display = 'none';
-            if (e.target === commentModal) commentModal.style.display = 'none';
+        fetch(scriptURL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ type: "comment", name: name, comment: comment })
+        })
+        .then(() => {
+            alert("✅ Aapka Comment successfully post ho gaya!");
+            if(nameInput) nameInput.value = "";
+            if(commentInput) commentInput.value = "";
+            commentModal.style.display = 'none';
+            setTimeout(loadComments, 1500);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("❌ Comment post nahi hua.");
         });
-    </script>
+    });
+
+    // Load Live Comments from Google Sheet
+    function loadComments() {
+        var container = document.getElementById('commentsContainer');
+        if (!container) return;
+
+        fetch(scriptURL)
+        .then(response => response.json())
+        .then(data => {
+            container.innerHTML = "";
+            if (!data || data.length === 0) {
+                container.innerHTML = '<div style="color:var(--text-secondary); text-align:center; padding:15px;">अभी कोई comment नहीं है। पहला comment आप करें! 👇</div>';
+                return;
+            }
+            data.forEach(item => {
+                var card = document.createElement("div");
+                card.className = "comment-item";
+                
+                card.innerHTML = `
+                    <div class="comment-header">
+                        <span class="comment-author">👤 ${item.name || "Anonymous"}</span>
+                        <span class="comment-date">${item.date ? new Date(item.date).toLocaleString("hi-IN") : ""}</span>
+                    </div>
+                    <div class="comment-text">${item.comment || ""}</div>
+                `;
+                container.appendChild(card);
+            });
+        })
+        .catch(err => {
+            console.error("Comments Fetch Error:", err);
+            container.innerHTML = '<div style="color:var(--text-secondary); text-align:center; padding:15px;">💬 Comments Google Sheet mein safe ho rahe hain!</div>';
+        });
+    }
+
+    window.onload = function () {
+        loadComments();
+    };
+
+    window.addEventListener('click', (e) => {
+        if (e.target === followModal) followModal.style.display = 'none';
+        if (e.target === commentModal) commentModal.style.display = 'none';
+    });
+</script>
+
+
+
+
+
+
 </body>
 </html>
